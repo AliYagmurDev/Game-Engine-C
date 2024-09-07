@@ -6,6 +6,6 @@ int CALLBACK WinMain(
     LPSTR lpCmdLine,
     int nCmdShow) 
 {
-    MessageBoxA(0, "Hello World", "My First Window", MB_OK|MB_ICONINFORMATION);
+    MessageBoxA(0, "Hello World Second Test", "My First Window", MB_OK|MB_ICONINFORMATION);
     return(0);
 }
