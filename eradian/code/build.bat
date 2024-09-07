@@ -1,0 +1,5 @@
+@echo off
+mkdir ..\..\build
+pushd ..\..\build
+cl -Zi ..\eradian\code\win32_eradian.cpp user32.lib
+popd
