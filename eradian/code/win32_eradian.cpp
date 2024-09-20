@@ -10,6 +10,8 @@
 // GlobalRunning controls the quit state of the application
 global_variable bool GlobalRunning;
 
+global_variable LPDIRECTSOUNDBUFFER GlobalSecondaryBuffer;
+
 // define the offscreen buffer struct
 struct win32_offscreen_buffer {
     // Pixels are always 32-bits wide, Memory Order BB GG RR XX
@@ -109,7 +111,6 @@ internal void Win32InitDSound(HWND Window, INT32 SamplesPerSecond, INT32 BufferS
             BufferDescription.dwFlags = 0;
             BufferDescription.dwBufferBytes = BufferSize;
             BufferDescription.lpwfxFormat = &WaveFormat;
-            LPDIRECTSOUNDBUFFER GlobalSecondaryBuffer;
             if(SUCCEEDED(DirectSound->CreateSoundBuffer(&BufferDescription, &GlobalSecondaryBuffer, 0))) {
                 OutputDebugStringA("Secondary buffer created.\n");
             }
